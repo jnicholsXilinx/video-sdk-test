@@ -1,0 +1,126 @@
+# (c) Copyright 2020 Xilinx, Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+
+##############################################################################
+#######################    RELEASE INFORMATION    ############################
+##############################################################################
+Release Date: 12/2/2020
+Release TAG: U30_Transcoder_Release_v0.9
+
+##############################################################################
+#######################    TABLE OF CONTENTS    ##############################
+##############################################################################
+* NEW IN THIS RELEASE
+
+* SUPPORTED FEATURES
+
+* LIMITATIONS
+
+* KNOWN ISSUES
+
+* BUILD INFORMATION
+
+###############################################################################
+#########################   NEW IN THIS RELEASE   #############################
+###############################################################################
+* Initial release of H.264 and HEVC transcoder on U30 FPGA cards. The H.264 
+  and HEVC decoders and encoders run at 2160p60. The H.264 and HEVC transcoder
+  can run ABR ladder at real time with a 1080p60 input.
+
+###############################################################################
+#########################   SUPPORTED FEATURES   ##############################
+###############################################################################
+H.264 Encoder Features:
+----------------------
+* Distribution level video quality, better than x264 slow
+* Broadcast and Distribution level video quality 2160p60 H.264 encoding in a
+  single Xilinx Alveo U30 Data Center accelerator card suitable for cloud 
+  or on-premise deployments.
+* 24 simultaneously independent encoded 540p30 streams on a single Xilinx
+  device
+* Supports 4:2:0 8-bit input YUV
+* Supports Main and High profile
+* Constant bit rate(CBR) and Variable bit rate(VBR) are supported.
+
+HEVC Encoder Features:
+---------------------
+* High-quality live encoding
+* Xilinx® FPGA accelerated encoding with no host CPU requirements
+* 24 simultaneously independent encoded 540p30 streams on a single Xilinx
+  device
+* Broadcast-quality 2160p60 HEVC live encoding.
+* Built-in multipass encoding
+* Main Profile up to Level 5.1 HD/SD 4:2:0 8 bit
+* Constant bit rate (CBR), capped variable bit rate (VBR), and fixed QP modes
+* Bit rates: Configurable from 100 Kbps to 40 Mbps
+* Slice types: I, P and B with flexible open/closed GOP modes and GOP lengths
+
+###############################################################################
+#############################   LIMITATIONS   #################################
+###############################################################################
+* H.264 and HEVC encoder supports Only 4:2:0 8-bit format.
+
+###############################################################################
+############################   KNOWN ISSUES   #################################
+###############################################################################
+* Reliability issues on long running transcodes
+
+###############################################################################
+##########################   BUILD INFORMATION   ##############################
+###############################################################################
+Package/Build IDS:
+==================================================================================================================
+Package                              | Repo                        | Branch                             | Commit
+==================================================================================================================
+jobSlotReservation-0.0.2-Linux.deb   | git internal:               | XMA2_XRM                           | bc8f22e
+                                     | XRM_jobSlot_reservation_app |                                    |
+------------------------------------------------------------------------------------------------------------------
+launcher-0.0.2-Linux.deb             | git internal:               | XMA2_XRM                           | 319a49d
+                                     | mpsoc_XRM_launcher          |                                    |
+------------------------------------------------------------------------------------------------------------------
+xcdr-0.2.10-Linux.deb                | git internal: xcdr          | XMA2_XRM                           | 5720ddf
+------------------------------------------------------------------------------------------------------------------
+xffmpeg-4.1.6-Linux.deb              | git internal: xffmpeg       | U30_Transcoder_Release_v0.9_branch | de6d705
+------------------------------------------------------------------------------------------------------------------
+xlookahead-0.0.4-Linux.deb           | git internal:               | XMA2_XRM                           | 365c727
+                                     | xma_xlnx_lookahead          |                                    |
+------------------------------------------------------------------------------------------------------------------
+xmaPropsTOjson-0.0.2-Linux.deb       | git internal:               | XMA2_XRM                           | 219b37b
+                                     | xmaPropsToJson_plugin       |                                    |
+------------------------------------------------------------------------------------------------------------------
+xmpsoccodecs-0.0.16-Linux.deb        | git internal:               | XMA2_XRM                           | faba04d
+                                     | vcu_xma_plugins             |                                    |
+------------------------------------------------------------------------------------------------------------------
+xmultiscaler-0.0.8-Linux.deb         | git internal:               | XMA2_XRM                           | e768b76
+                                     | multiscaler_xma_plugin      |                                    |
+------------------------------------------------------------------------------------------------------------------
+xrm_202010.1.0.116_18.04-x86_64.deb  | git internal:               | 2020.1                             | a5b1165
+                                     | XRM                         |                                    |
+------------------------------------------------------------------------------------------------------------------
+xrmU30Decoder-0.0.2-Linux.deb        | git internal:               | XMA2_XRM                           | 4c54eb4
+                                     | XRM_U30_decoder_plugin      |                                    |
+------------------------------------------------------------------------------------------------------------------
+xrmU30Encoder-0.0.2-Linux.deb        | git internal:               | XMA2_XRM                           | 891f001
+                                     | XRM_U30_encoder_plugin      |                                    |
+------------------------------------------------------------------------------------------------------------------
+xrmU30Scaler-0.0.2-Linux.deb         | git internal:               | XMA2_XRM                           | 03e78f9
+                                     | XRM_U30_scaler_plugin       |                                    |
+------------------------------------------------------------------------------------------------------------------
+xrt_202010.2.6.0_18.04-amd64-xrt.deb | github:                     | 2020.1                             | 7881583
+                                     | XRT                         |                                    |
+------------------------------------------------------------------------------------------------------------------
+xvbm-0.0.3-Linux.deb                 | git internal:               | XMA2_XRM                           | ff575ee
+                                     | xvbm                        |                                    |
+------------------------------------------------------------------------------------------------------------------
