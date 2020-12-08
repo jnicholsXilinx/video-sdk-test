@@ -1,0 +1,6 @@
+[video-sdk]
+name=Xilinx Video SDK repository
+baseurl=https://jnicholsxilinx.github.io/video-sdk-test/awslinux2
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/video-sdk-key
